@@ -2,8 +2,13 @@ import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import {FaCircle} from "react-icons/fa";
 import NavBar from './Navbar';
+import Typewriter from "typewriter-effect";
+import { BiLockOpen } from 'react-icons/bi';
+
+
 
 const Home = () => {
+  
   return (
     <>
       <div className='absolute top-0 h-6 w-full bg-[#606060] flex items-center pl-1 '> 
@@ -23,9 +28,35 @@ const Home = () => {
           <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
             Hilali Abdelali
           </h1>
-          <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
-           Je suis developpeur web :)
+          
+          <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0] "> 
+          <Typewriter
+            options={{
+          
+              loop: true,
+            }}
+            onInit={(typewriter)=> {
+              
+              console.log(typewriter)
+            typewriter
+            .changeDeleteSpeed(40)
+            .changeDelay(80)
+            .typeString("Je Suis developpeur web !")
+            .pauseFor(1000)
+            .deleteChars(5)
+            .typeString("Javascript !")
+            .pauseFor(1000)
+            .deleteChars(12)
+            .typeString("React !")
+            .pauseFor(1000)
+            .deleteChars(7)
+            .pauseFor(1000)
+            .start()
+            }}
+            />
           </h2>
+       
+
           <p className='text-[#8892b0] py-4 max-w-[700px]'>
             I’m a full-stack developer specializing in building (and occasionally
             designing) exceptional digital experiences. Currently, I’m focused on

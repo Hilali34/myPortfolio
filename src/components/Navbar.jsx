@@ -19,18 +19,17 @@ import { BiRocket } from 'react-icons/bi';
 const NavBar = () => {
 
   const [nav, setNav] = useState(false)
-  const handleClick = () => setNav(!nav) 
-
+  const handleClick = () => setNav(!nav)
   return (
     <div className=' w-full h-full  flex-col justify-between items-center px-4 bg-[#333333] text-gray-300'>
      
       {/* Menu */}
       
         <nav className='hidden :flex flex-col items-cent  md:flex items-center '>
-          <li className='my-12 list-none'> <AiOutlineHome size={30}/></li>
-          <li className='my-12 list-none'> <AiOutlineSolution size={30}/> </li>
-          <li className='my-12 list-none'> < BiRocket size={30}/> </li>
-          <li className='my-12 list-none'> <BiNetworkChart size={30}/> </li>
+          <li className='my-12'> <AiOutlineHome size={30}/></li>
+          <li className='my-12'> <AiOutlineSolution size={30}/> </li>
+          <li className='my-12'> < BiRocket size={30}/> </li>
+          <li className='my-12'> <BiNetworkChart size={30}/> </li>
       
         </nav>
 
