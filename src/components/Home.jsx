@@ -1,39 +1,26 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
-import {FaCircle} from "react-icons/fa";
-import NavBar from './Navbar';
 import Typewriter from "typewriter-effect";
-import { BiLockOpen } from 'react-icons/bi';
-
+import image from '../assets/html-icon.svg'
 
 
 const Home = () => {
   
   return (
-    <>
-      <div className='absolute top-0 h-6 w-full bg-[#606060] flex items-center pl-1 '> 
     
-      <span ><FaCircle size={13} color={"#F24239"}/></span>
-      <span className='m-3'><FaCircle size={13} color={"#FEBC2E"}/></span>
-      <span><FaCircle size={13} color={"#28CB40"}/></span> 
-
-      </div>
-
-      <div className='grid grid-cols-[100px_1fr]'>
-       <NavBar />
-       <div name='home' className='w-full h-screen bg-[#303030]'>
+       <div name='home' className='w-full bg-[#303030]'>
         {/* Container */}
-        <div className='max-w-[900px] mx-auto px-8 flex flex-col justify-center h-full '>
-          <p className='text-pink-600 mt-28 '>Salut je m'appel </p>
-          <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
+        <div className='max-w-[900px] mx-auto  flex flex-col justify-center w-full h-screen'>
+          <p className='first-letter:text-4xl text-[#ffc300] py-5 text-2xl '>Salut je m'appelle </p>
+          <h1 className='text-4xl sm:text-7xl py-5 font-bold text-[#ccd6f6]'>
             Hilali Abdelali
           </h1>
           
-          <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0] "> 
+          <h2 className="text-4xl  sm:text-5xl font-bold text-[#8892b0] "> 
           <Typewriter
             options={{
           
-              loop: true,
+              loop: false,
             }}
             onInit={(typewriter)=> {
               
@@ -44,27 +31,25 @@ const Home = () => {
             .typeString("Je Suis developpeur web !")
             .pauseFor(1000)
             .deleteChars(5)
-            .typeString("Javascript !")
+            .typeString("<span style='color: #FFC300'>Javascript !</span>")
             .pauseFor(1000)
             .deleteChars(12)
-            .typeString("React !")
-            .pauseFor(1000)
-            .deleteChars(7)
-            .pauseFor(1000)
+            .typeString("<span style='color: #1891CF'>React !</span>")
+            .pauseFor(2000)
             .start()
             }}
             />
           </h2>
        
 
-          <p className='text-[#8892b0] py-4 max-w-[700px]'>
-            I’m a full-stack developer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I’m focused on
-            building responsive full-stack web applications.
+          <p className='text-[#8892b0] text-2xl py-10 max-w-[700px]'>
+          Le développement est ma passion, je viens de finir le parcours Développeur Web chez 
+          OpenClassRooms et je suis à l'ecoute pour toutes opprtunités pour un poste de développeur web junior sur Montpellier
+          en alternace pour un bachelor 3. Je suis hyper motivé et impatient de commencer une nouvelle aventure !
           </p>
           <div>
-            <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
-              Suivez moi !
+            <button className='text-white  group border-2 px-6 py-3 my-2 flex items-center hover:bg-[#FFC300] hover:border-[#FFC300] hover:text-[black]'>
+              En savoir plus
               <span className='group-hover:rotate-90 duration-300'>
                 <HiArrowNarrowRight className='ml-3 ' />
               </span>
@@ -72,8 +57,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
-    </>
   )
 }
 
